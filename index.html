@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js code generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="micro.js"></script>
+</head>
+<body>
+<div id="toolbar">
+
+</div>
+<div id="main">
+    <div id="leftPanel">
+        <a href="#">Number</a> <a href="#">String</a> BigInt <br>
+        <button>--&gt;</button>
+        <textarea name="numberHint" id="numberHint" cols="30" rows="10">
+Number.isFinite()
+Number.isInteger()
+Number.isNaN()
+Number.isSafeInteger()
+Number.parseFloat()
+Number.parseInt()
+Number.prototype.toExponential()
+Number.prototype.toFixed()
+Number.prototype.toLocaleString()
+Number.prototype.toPrecision()
+Number.prototype.toSource()
+Number.prototype.toString()
+Number.prototype.valueOf()
+
+Number.EPSILON
+Number.MAX_SAFE_INTEGER
+Number.MAX_VALUE
+Number.MIN_SAFE_INTEGER
+Number.MIN_VALUE
+Number.NEGATIVE_INFINITY
+Number.NaN
+Number.POSITIVE_INFINITY
+    </textarea>
+        <textarea name="stringHint" id="stringHint" cols="30" rows="10"></textarea>
+        <textarea name="objectHint" id="objectHint" cols="30" rows="10">
+Object.assign()
+Object.create()
+Object.defineProperties()
+Object.defineProperty()
+Object.entries()
+Object.freeze()
+Object.fromEntries()
+Object.getNotifier()
+Object.getOwnPropertyDescriptor()
+Object.getOwnPropertyDescriptors()
+Object.getOwnPropertyNames()
+Object.getOwnPropertySymbols()
+Object.getPrototypeOf()
+Object.is()
+Object.isExtensible()
+Object.isFrozen()
+Object.isSealed()
+Object.keys()
+Object.observe()
+Object.preventExtensions()
+Object.prototype.__defineGetter__()
+Object.prototype.__defineSetter__()
+Object.prototype.__lookupGetter__()
+Object.prototype.__lookupSetter__()
+Object.prototype.eval()
+Object.prototype.hasOwnProperty()
+Object.prototype.isPrototypeOf()
+Object.prototype.propertyIsEnumerable()
+Object.prototype.toLocaleString()
+Object.prototype.toSource()
+Object.prototype.toString()
+Object.prototype.unwatch()
+Object.prototype.valueOf()
+Object.prototype.watch()
+Object.seal()
+Object.setPrototypeOf()
+Object.unobserve()
+Object.values()
+Object.prototype.__proto__
+Object.prototype.constructor
+
+const huge = BigInt(9007199254740991);
+2n**1277n-1n
+操作符： + - * / ** ;除 >>> （无符号右移）之外的 位操作 也支持。
+
+Function
+属性
+Function.arguments
+Function.arity
+Function.caller
+Function.displayName
+Function.length
+Function.prototype
+Function.name
+方法
+Function.prototype.apply()
+Function.prototype.bind()
+Function.prototype.call()
+Function.prototype.isGenerator()
+        </textarea>
+    </div>
+    <div id="editorPanel"><textarea name="editor" id="editor" cols="60" rows="30"></textarea></div>
+    <div id="aiPanel"><textarea name="ai" id="ai" cols="55" rows="35">
+function _(id) {
+  if (id == null) return document.body;
+  if(Number.isInteger(id)) return document.body.children[id];
+  return document.getElementById(id)
+}
+function $(sel) {
+  return document.querySelector(sel);
+}
+    </textarea></div>
+</div>
+<script>
+   // window.cursor=_('editor').onselect
+</script>
+<div id="footer">+-*/()[]{}</div>
+</body>
+</html>
