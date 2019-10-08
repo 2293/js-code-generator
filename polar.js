@@ -1,5 +1,5 @@
 /*!
- * micro.js v1.0.0
+ * polar.js v1.0.0
  * (c) 2018-2019 Cody Luo
  * Released under the MIT License.
  */

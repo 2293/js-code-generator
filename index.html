@@ -191,9 +191,18 @@ function _(id) {
   if(Number.isInteger(id)) return document.body.children[id];
   return document.getElementById(id)
 }
+
 function $(sel) {
   return document.querySelector(sel);
 }
+
+let ul1=$('ul');
+ul1.addEventListener('click', function(ev) {
+  if( ev.target.tagName === 'LI') {
+     ev.target.classList.toggle('done'); 
+  }
+}, false);
+
     </textarea></div>
 </div>
 <script>
